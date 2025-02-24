@@ -1,0 +1,401 @@
+/* main  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background: #e0e0e0;
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_logo_text{
+    width: 35%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    float: right;
+}
+
+.nav-links a {
+    color: #000;
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(26,42,54,0.9), rgba(26,42,54,0.8)),
+                url('https://images.unsplash.com/photo-1509391366360-2e959784a276');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 5%;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background: #4CAF50;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #45a049;
+}
+
+/* Features Section */
+.features {
+    padding: 5rem 5%;
+    background: #f9f9f9;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 5%;
+    background: #1a2a36;
+    color: white;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 5px;
+}
+
+footer {
+    background: #152028;
+    padding: 2rem 5%;
+    text-align: center;
+    color: white;
+}
+/* About Section */
+.about {
+    padding: 5rem 5%;
+    background: #fff;
+    color: #333;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.about .section-title {
+    margin-bottom: 2rem;
+    color: #1a2a36;
+    font-size: 2.5rem;
+}
+
+.about-content p:first-child {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* SGEn Section */
+.sgen {
+    padding: 5rem 5%;
+    background: #f9f9f9;
+    color: #1a2a36;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sgen h1 {
+    font-size: 3rem;
+    color: #1a2a36;
+    margin-bottom: 2rem;
+    text-align: left;
+    border-left: 5px solid #4CAF50;
+    padding-left: 1rem;
+}
+
+.sgen h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.sgen h3 {
+    font-size: 1.5rem;
+    color: #1a2a36;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.sgen p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.sgen ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.sgen ul li {
+    margin-bottom: 0.8rem;
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.sgen ul li::before {
+    content: '✔';
+    color: #4CAF50;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.sgen .highlight {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.sgen .content-block {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.sgen img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.logo_nav {
+    width: 100px; /* Ajusta el tamaño según necesites */
+    height: auto; /* Mantiene la proporción */
+    cursor: pointer;
+}
+
+.logo_nav:hover {
+    opacity: 0.8; /* Efecto al pasar el cursor */
+}
+
+/* Navbar */
+.navbar {
+    background: #e0e0e0;
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_logo_text {
+    width: 35%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    float: right;
+    display: flex;
+}
+
+.nav-links a {
+    color: #000;
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+/* Hamburguer Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+.hamburger i {
+    color: #000;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #e0e0e0;
+        width: 100%;
+        padding: 1rem 0;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        padding: 1rem;
+        text-align: center;
+        width: 100%;
+        background: #e0e0e0;
+        color: #000;
+        border-top: 1px solid #ccc;
+    }
+
+    .nav-links a:hover {
+        background: #4CAF50;
+        color: white;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .sgen h1 {
+        font-size: 2.5rem;
+    }
+
+    .sgen h2 {
+        font-size: 1.8rem;
+    }
+
+    .sgen p {
+        font-size: 1rem;
+    }
+}
+
+
+/* about  */
+
+@media (max-width: 768px) {
+    .about-content p {
+        font-size: 1rem;
+    }
+}
+
+/* main  */
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}

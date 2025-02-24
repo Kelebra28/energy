@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Management System | Energy Solutions</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/logo.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav_logo_text">
+            <img src="./img/logo.png" alt="Logo" class="logo_nav">
+            <span class="logo">Energy Management System</span>
+        </div>
+        <div class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About us</a>
+            <a href="#contact">Contact</a>
+            <a href="./sge.html">SEG</a>
+            <a href="./main.html">ES</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Intelligent Energy Management</h1>
+            <p>Energy optimization for a sustainable future</p>
+            <button class="cta-button">Learn more</button>
+        </div>
+    </section>
+
+    <section class="features" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-solar-panel feature-icon"></i>
+                <h3>Energy efficiency</h3>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-chart-line feature-icon"></i>
+                <h3>Power quality</h3>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bolt feature-icon"></i>
+                <h3>Energy consultancy</h3>
+                <p>Support in the implementation of your Energy Management System SGEn.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-industry feature-icon"></i>
+                <h3>Industrial</h3>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-building-columns feature-icon"></i>
+                <h3>Governmental</h3>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-leaf feature-icon"></i>
+                <h3>Services</h3>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-handshake-angle feature-icon"></i>
+                <h3>Volunteering</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2 class="section-title">About us</h2>
+        <div class="about-content">
+            <p>
+                Throughout our 22 years of professional experience, we have focused on reducing energy consumption,
+                providing economic and ecological benefits when applied to different industries.
+            </p>
+            <p>
+                Our members are Certified Energy Managers (CEM), a certification granted by the Association of Energy
+                Engineers (AEE), recognized worldwide.
+            </p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="5" placeholder="Message" required></textarea>
+            <button class="cta-button">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Energy Management System. All rights reserved.</p>
+        <div class="social-icons">
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your message. We will be in touch soon.');
+            this.reset();
+        });
+
+        document.getElementById('hamburger').addEventListener('click', function () {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

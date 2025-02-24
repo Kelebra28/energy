@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Management System | Soluciones Energéticas</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/logo.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav_logo_text">
+            <img src="./img/logo.png" alt="Logo" class="logo_nav">
+            <span class="logo">Energy Management System</span>
+        </div>
+        <div class="nav-links">
+            <a href="./main.html">Inicio</a>
+            <a href="#services">Servicios</a>
+            <a href="#about">Nosotros</a>
+            <a href="#contact">Contacto</a>
+            <a href="./sgees.html">SEG</a>
+            <a href="./index.html">EN</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+    
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Gestión Inteligente de Energía</h1>
+            <p>Optimización energética para un futuro sostenible</p>
+            <button class="cta-button">Conoce más</button>
+        </div>
+    </section>
+
+    <section class="features" id="services">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-solar-panel feature-icon"></i>
+                <h3>Eficiencia energética</h3>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-chart-line feature-icon"></i>
+                <h3>Calidad de energía</h3>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bolt feature-icon"></i>
+                <h3>Consultoría energética</h3>
+                <p>Acompañamiento en la implementación de su Sistema de Gestión de Energía SGEn.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-industry feature-icon"></i>
+                <h3>Industrial</h3>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-building-columns feature-icon"></i>
+                <h3>Gubernamental</h3>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-leaf feature-icon"></i>
+                <h3>Servicios</h3>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-handshake-angle feature-icon"></i>
+                <h3>Voluntariado</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2 class="section-title">Nosotros</h2>
+        <div class="about-content">
+            <p>
+                A lo largo de 22 años de trayectoria profesional, nos hemos enfocado en reducir el
+                consumo energético, aportando beneficios económicos y ecológicos al aplicarlo a
+                diferentes industrias. 
+            </p>
+            <p>
+                Nuestros miembros son Gestores Energéticos Certificados (CEM),
+                certificación otorgada por la Asociación de Ingenieros Energéticos (AEE), reconocida a
+                nivel mundial.
+            </p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contacto</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="5" placeholder="Mensaje" required></textarea>
+            <button class="cta-button">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Energy Management System. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Gracias por su mensaje. Nos pondremos en contacto pronto.');
+            this.reset();
+        });
+
+        document.getElementById('hamburger').addEventListener('click', function () {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    });
+    </script>
+</body>
+
+</html>

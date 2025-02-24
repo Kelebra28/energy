@@ -8,7 +8,7 @@
 
 /* Navbar */
 .navbar {
-    background: #e0e0e0;
+    background: #000;
     padding: 1rem 5%;
     position: fixed;
     width: 100%;
@@ -274,7 +274,7 @@ footer {
 
 /* Navbar */
 .navbar {
-    background: #e0e0e0;
+    background: #152028;
     padding: 1rem 5%;
     position: fixed;
     width: 100%;
@@ -294,7 +294,7 @@ footer {
 }
 
 .logo {
-    color: #000;
+    color: #fff;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -305,7 +305,7 @@ footer {
 }
 
 .nav-links a {
-    color: #000;
+    color: #fff;
     text-decoration: none;
     margin-left: 2rem;
     transition: color 0.3s;

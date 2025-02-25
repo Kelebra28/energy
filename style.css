@@ -326,6 +326,41 @@ footer {
     color: #000;
 }
 
+.contact_media i {
+    font-size: 40px; 
+    margin: 10px;   
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.contact_media i:hover {
+    transform: scale(1.2); 
+    color: #4CAF50;
+}
+
+.contact_links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.contact_links a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact_links a:hover {
+    background-color: #357b38; 
+    transform: scale(1.05); 
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     .nav-links {

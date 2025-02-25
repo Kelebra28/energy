@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energy Management System | Energy Solutions</title>
     <link rel="icon" type="image/png" href="img/logo.png">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/logo.png">
-    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <nav class="navbar">
         <div class="nav_logo_text">
-            <img src="./img/logo.png" alt="Logo" class="logo_nav">
+            <img src="img/logo.png" alt="Logo" class="logo_nav">
             <span class="logo">Energy Management System</span>
         </div>
         <div class="nav-links">
-            <a href="/index.html">Home</a>
+            <a href="#home">Home</a>
             <a href="#services">Services</a>
             <a href="#about">About us</a>
             <a href="#contact">Contact</a>
-            <a href="./sge.html">SEG</a>
-            <a href="./main.html">ES</a>
+            <a href="sge.html">SEG</a>
+            <a href="main.html">ES</a>
         </div>
         <div class="hamburger" id="hamburger">
             <i class="fas fa-bars"></i>
         </div>
     </nav>
-
 
     <section class="hero" id="home">
         <div class="hero-content">
@@ -54,7 +49,7 @@
             <div class="feature-card">
                 <i class="fas fa-bolt feature-icon"></i>
                 <h3>Energy consultancy</h3>
-                <p>Support in the implementation of your Energy Management System SGEn.</p>
+                <p>Support in Energy Management System implementation</p>
             </div>
             <div class="feature-card">
                 <i class="fa-solid fa-industry feature-icon"></i>
@@ -78,43 +73,27 @@
     <section class="about" id="about">
         <h2 class="section-title">About us</h2>
         <div class="about-content">
-            <p>
-                Throughout our 22 years of professional experience, we have focused on reducing energy consumption,
-                providing economic and ecological benefits when applied to different industries.
-            </p>
-            <p>
-                Our members are Certified Energy Managers (CEM), a certification granted by the Association of Energy
-                Engineers (AEE), recognized worldwide.
-            </p>
+            <p>22 years of experience in energy consumption reduction</p>
+            <p>Certified Energy Managers (CEM) by Association of Energy Engineers</p>
         </div>
     </section>
 
     <section class="contact" id="contact">
         <h2 class="section-title">Contact</h2>
-        <div>
-            <div class="contact_links">
-                <a href="mailto:energymanagementsystems360@EMS">
-                    <i class="fa-solid fa-envelope"></i>
-                      Send email
-                    </a>
-                <a href="tel:+525514749172">
-                    <i class="fa-solid fa-phone"></i>
-                    Call the phone
-                </a>
-            </div>            
-            <div class="contact_media">
-                <i class="fab fa-youtube"></i>
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-linkedin"></i>
-                <i class="fab fa-instagram"></i>
-            </div>
+        <div class="contact_links">
+            <a href="mailto:contact@example.com">
+                <i class="fa-solid fa-envelope"></i> Send Email
+            </a>
+            <a href="tel:+1234567890">
+                <i class="fa-solid fa-phone"></i> Call Us
+            </a>
         </div>
-        <!-- <form class="contact-form">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea rows="5" placeholder="Message" required></textarea>
-            <button class="cta-button">Send Message</button>
-        </form> -->
+        <div class="contact_media">
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
     </section>
 
     <footer>
@@ -128,28 +107,27 @@
     </footer>
 
     <script>
-        // Smooth scrolling
+        // Hamburger Menu Toggle
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+
+        // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
         });
-
-        // Form submission
-        document.querySelector('.contact-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Thank you for your message. We will be in touch soon.');
-            this.reset();
-        });
-
-        document.getElementById('hamburger').addEventListener('click', function () {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        });
     </script>
 </body>
-
 </html>
